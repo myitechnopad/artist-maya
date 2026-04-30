@@ -12,11 +12,11 @@ const filmTvImages = [g9, g10, g1, g20, g23, T5];
 
 const youtubeProjects = [
   {
-    title: "Mahakumbh Mela 2013 | Moksha Ki Kamna",
+    title: "Sardar- The game change | Jamnagar ki Maharani",
     category: "Documentary Film",
     videoId: "G7QnJWwti6s",
     url: "https://www.youtube.com/watch?v=G7QnJWwti6s",
-    desc: "Spirit of Moksha: Kumbh Mela, released worldwide by Saregama.",
+    desc: "Sardar- The game change, released on DD National.",
   },
   {
     title: "Maya Sharma | Police Inspector Role",
