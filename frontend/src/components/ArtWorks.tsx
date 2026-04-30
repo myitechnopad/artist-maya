@@ -89,7 +89,7 @@ const ArtWorks: React.FC = () => {
               </p>
 
               <a
-                href="https://instagram.com/mayasharma_artist"
+                href="https://www.instagram.com/its_mayasharma?igsh=cmVsY210MTBjeGho&utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex rounded-full bg-black px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-gray-800"
