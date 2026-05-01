@@ -410,6 +410,7 @@ const Navbar: React.FC = () => {
     { label: "Film Production", href: "#film-production" },
     { label: "Art Works", href: "#artworks" },
     { label: "Gallery", href: "#gallery" },
+    { label: "Media", href: "#media" },
   ];
 
   const handleMenuClick = (

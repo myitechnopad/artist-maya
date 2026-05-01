@@ -12,13 +12,6 @@ const theatreImages = [T1, T2, T3,T6, n4, n9, n16];
 
 const theatreVideos = [
   {
-    title: "Maya Sharma | Police Inspector Role",
-    category: "TV Series (Mauka-E-Vardaat)",
-    videoId: "beLYCQ9tf9g",
-    url: "https://www.youtube.com/watch?v=beLYCQ9tf9g",
-    desc: "Maya Sharma portraying a strong police inspector role in Mauka-E-Vardaat, showcasing her powerful on-screen presence in crime-based television storytelling.",
-  },
-  {
     title: "Maya Sharma | Theatre Performance",
     category: "Stage Performance",
     videoId: "CZ2kribumE8",
@@ -61,9 +54,6 @@ const Theatre: React.FC = () => {
             {/* Left Content Card */}
             <div className="w-full text-gray-800 md:w-1/2">
               <div className="max-h-[520px] overflow-y-auto rounded-[1.8rem] border border-gray-200 bg-white/80 p-6 shadow-lg backdrop-blur md:p-8">
-                <h3 className="mb-4 font-serif text-3xl font-semibold text-black md:text-4xl">
-                  Maya Sharma
-                </h3>
 
                 <p className="mb-4 text-[15px] leading-7 text-gray-700">
                   <span className="font-semibold text-black">
@@ -152,6 +142,7 @@ const Theatre: React.FC = () => {
                 </div>
 
                 <div className="absolute bottom-8 right-8 z-20 flex gap-2">
+                 
                   {theatreImages.map((_, index) => (
                     <button
                       key={index}
@@ -170,6 +161,9 @@ const Theatre: React.FC = () => {
             </div>
           </div>
 
+        <div className="mb-14 py-4 text-left font-serif text-2xl text-black md:text-6xl">
+          Artistic Expressions
+        </div>  
           {/* YouTube Video Section */}
           <div className="mt-12 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="overflow-hidden rounded-[1.7rem] border border-black/10 bg-black shadow-2xl">

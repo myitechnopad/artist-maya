@@ -51,16 +51,16 @@ const ImageSlider: React.FC = () => {
         {/* <h1 className="text-white text-3xl sm:text-5xl md:text-6xl font-serif font-semibold leading-tight drop-shadow-xl">
           Perform • Transform • Inspire
         </h1> */}
-        <h1 className="text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight drop-shadow-xl whitespace-nowrap">
+        <h3 className="text-white text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-semibold leading-tight drop-shadow-xl whitespace-nowrap">
   Perform • Transform • Inspire
-</h1>
+</h3>
 
         {/* <div className="mt-6 h-[1px] w-24 bg-white/50 mx-auto" /> */}
       </div>
 
       {/* 🔥 BOTTOM CONTENT */}
       {/* <div className="absolute bottom-24 left-1/2 z-10 -translate-x-1/2 text-center px-6"> */}
-      <div className="absolute bottom-[60px] left-1/2 z-10 -translate-x-1/2 text-center px-6">
+      <div className="absolute bottom-[40px] left-1/2 z-10 -translate-x-1/2 text-center px-6">
         <p className="text-white/90 text-sm sm:text-lg max-w-2xl leading-relaxed">
           A journey through theatre and cinema—driven by craft, curiosity,
           and the pursuit of meaningful storytelling.

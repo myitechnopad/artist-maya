@@ -1,33 +1,33 @@
 // src/components/FilmAndTV.tsx
 import React, { useEffect, useState } from "react";
 
-import g9 from "../assets/g9.jpeg";
+import g24 from "../assets/g24.jpeg";
 import g10 from "../assets/g10.jpeg";
 import g1 from "../assets/g1.jpeg";
 import g20 from "../assets/g20.jpeg";
 import g23 from "../assets/g23.jpeg";
-import T5 from "../assets/T5.jpeg";
+import g25 from "../assets/g25.jpeg";
 
-const filmTvImages = [g9, g10, g1, g20, g23, T5];
+const filmTvImages = [g1, g24, g10, g20, g23, g25];
 
 const youtubeProjects = [
   {
+    title: "Maya Sharma | Police Inspector",
+    category: "TV Series (Mauka-E-Vardaat)",
+    videoId: "beLYCQ9tf9g",
+    url: "https://www.youtube.com/watch?v=beLYCQ9tf9g",
+    desc: "Maya Sharma portraying a strong police inspector character in Mauka-E-Vardaat, showcasing her powerful on-screen presence in crime-based television storytelling.",
+  },
+  {
     title: "Sardar- The game change | Jamnagar ki Maharani",
-    category: "Documentary Film",
+    category: "Film (DD National)",
     videoId: "G7QnJWwti6s",
     url: "https://www.youtube.com/watch?v=G7QnJWwti6s",
     desc: "Sardar- The game change, released on DD National.",
   },
   {
-    title: "Maya Sharma | Police Inspector Role",
-    category: "TV Series (Mauka-E-Vardaat)",
-    videoId: "beLYCQ9tf9g",
-    url: "https://www.youtube.com/watch?v=beLYCQ9tf9g",
-    desc: "Maya Sharma portraying a strong police inspector role in Mauka-E-Vardaat, showcasing her powerful on-screen presence in crime-based television storytelling.",
-  },
-  {
-    title: "Maya Sharma | Featured Episode",
-    category: "TV / Web Series",
+    title: "Sportify | Ad Film",
+    category: "Ad Film",
     videoId: "4KnZvhTCwZs",
     url: "https://www.youtube.com/watch?v=4KnZvhTCwZs",
     desc: "A featured appearance of Maya Sharma in a television episode showcasing her screen performance.",
@@ -40,14 +40,14 @@ const youtubeProjects = [
     desc: "A Protinex India campaign highlighting strength and endurance through the Air Chair Test concept.",
   },
   {
-    title: "Maya Sharma | Franklin",
-    category: "Film / Series",
+    title: "Franklin",
+    category: "Ad Film",
     videoId: "FEqgfUtapn4",
     url: "https://www.youtube.com/watch?v=FEqgfUtapn4",
     desc: "Maya Sharma featured in Franklin, showcasing emotional and expressive screen performance.",
   },
   {
-    title: "Ad Film Project",
+    title: "Fevicol",
     category: "Ad Film",
     videoId: "sik4quXrjos",
     url: "https://www.youtube.com/watch?v=sik4quXrjos",
@@ -148,16 +148,9 @@ const FilmAndTV: React.FC = () => {
             </div>
 
             <div className="flex flex-col justify-center rounded-[1.7rem] border border-gray-200 bg-white/80 p-6 shadow-lg backdrop-blur md:p-8">
-              <p className="text-sm font-bold uppercase tracking-[0.25em] text-gray-500">
-                Featured Talent
-              </p>
-
-              <h3 className="mt-2 font-serif text-4xl font-semibold text-black md:text-5xl">
-                Maya Sharma
-              </h3>
 
               <p className="mt-5 max-w-3xl text-base leading-8 text-gray-700">
-                Maya Sharma’s journey in cinema and television reflects a rich
+                <b>Maya Sharma</b>’s journey in cinema and television reflects a rich
                 blend of performance and creative collaboration, both in front of
                 and behind the camera.
               </p>

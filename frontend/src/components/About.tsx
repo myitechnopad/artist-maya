@@ -6,8 +6,9 @@ import g21 from "../assets/g21.jpeg";
 import A4 from "../assets/A4.jpeg";
 import g17 from "../assets/g17.jpeg";
 import A5 from "../assets/A5.jpeg";
+import g26 from "../assets/g26.jpeg";
 
-const aboutImages = [A3, g21, A4, g17, A5];
+const aboutImages = [A3, g21, A4, g26, A5];
 
 const About: React.FC = () => {
   const [currentImage, setCurrentImage] = useState(0);

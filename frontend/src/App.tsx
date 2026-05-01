@@ -10,6 +10,7 @@ import FilmAndTV from "./components/FilmAndTV";
 import FilmProduction from "./components/FilmProduction";
 import ArtWorks from "./components/ArtWorks";
 import Gallery from "./components/Gallery";
+import Media from "./components/Media";
 import Footer from "./components/Footer";
 
 
@@ -24,6 +25,7 @@ export default function App() {
        <FilmProduction />
        <ArtWorks />
        <Gallery />
+       <Media />  
        <Footer />
     </Router>
   );

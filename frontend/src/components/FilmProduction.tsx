@@ -8,6 +8,13 @@ import j6 from "../assets/j6.jpeg";
 
 const productionImages = [A2, g3, T4, g15, j6];
 
+import c1 from "../assets/c1.jpeg";
+import c2 from "../assets/c2.jpeg";
+import c3 from "../assets/c3.jpeg";
+import c4 from "../assets/c4.jpeg";
+
+const castingImages = [c1, c2, c3, c4];
+
 const FilmProduction: React.FC = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -16,7 +23,14 @@ const FilmProduction: React.FC = () => {
       setCurrentImage((prev) => (prev + 1) % productionImages.length);
     }, 3000);
 
-    return () => window.clearInterval(timer);
+    const castingTimer = window.setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % castingImages.length);
+    }, 3000);
+
+    return () => {
+      window.clearInterval(timer);
+      window.clearInterval(castingTimer);
+    };
   }, []);
 
   return (
@@ -37,7 +51,7 @@ const FilmProduction: React.FC = () => {
         </h2>
 
         <div className="rounded-[2rem] border border-white/60 bg-white/70 p-5 shadow-[0_30px_80px_rgba(0,0,0,0.12)] backdrop-blur-xl md:p-10">
-          <div className="grid gap-10 lg:grid-cols-[360px_1fr]">
+          <div className="grid gap-10 lg:grid-cols-[500px_1fr]">
             {/* Image Scroller */}
             <div className="relative h-[460px] overflow-hidden rounded-[1.7rem] border border-white/30 bg-black p-3 shadow-2xl">
               <div className="h-full w-full overflow-hidden rounded-[1.2rem]">
@@ -45,9 +59,8 @@ const FilmProduction: React.FC = () => {
                   className="flex h-full transition-transform duration-1000 ease-in-out"
                   style={{
                     width: `${productionImages.length * 100}%`,
-                    transform: `translateX(-${
-                      currentImage * (100 / productionImages.length)
-                    }%)`,
+                    transform: `translateX(-${currentImage * (100 / productionImages.length)
+                      }%)`,
                   }}
                 >
                   {productionImages.map((img, index) => (
@@ -67,18 +80,16 @@ const FilmProduction: React.FC = () => {
               </div>
 
               <div className="pointer-events-none absolute inset-3 rounded-[1.2rem] bg-gradient-to-t from-black/45 via-transparent to-transparent" />
-
               <div className="absolute bottom-7 right-7 flex gap-2">
                 {productionImages.map((_, index) => (
                   <button
                     key={index}
                     type="button"
                     onClick={() => setCurrentImage(index)}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      index === currentImage
-                        ? "w-6 bg-white"
-                        : "w-2 bg-white/50"
-                    }`}
+                    className={`h-2 rounded-full transition-all duration-300 ${index === currentImage
+                      ? "w-6 bg-white"
+                      : "w-2 bg-white/50"
+                      }`}
                     aria-label={`Go to production image ${index + 1}`}
                   />
                 ))}
@@ -89,10 +100,6 @@ const FilmProduction: React.FC = () => {
               <p className="text-sm font-bold uppercase tracking-[0.25em] text-gray-500">
                 Creative Journey
               </p>
-
-              <h3 className="mt-2 font-serif text-4xl font-semibold text-black md:text-5xl">
-                Maya Sharma
-              </h3>
 
               <p className="mt-5 text-[15px] leading-7 text-gray-700">
                 Beyond acting, Maya has built a deeply immersive practice in
@@ -107,32 +114,94 @@ const FilmProduction: React.FC = () => {
                 with people. Whether in remote villages or urban environments, she
                 brings authenticity and emotional truth to every story she tells.
               </p>
+              <span className="mt-4 text-[15px] leading-7 text-gray-700">
+                Her work has also extended into corporate filmmaking and collaborations with NGOs, highlighting grassroots impact and real human stories.
+              </span>
+             <br />
 
-              <div className="mt-7 rounded-[1.5rem] bg-black p-6 text-white shadow-2xl">
-                <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gray-400">
-                  Landmark Documentary
-                </p>
-
-                <h4 className="mt-2 font-serif text-2xl font-semibold">
-                  Mahakumbh Mela 2013 | Moksha Ki Kamna
-                </h4>
-
-                <p className="mt-3 text-sm leading-6 text-gray-300">
-                  A landmark documentary released worldwide by Saregama. Created
-                  over two years, Maya served as creative director, writer, and
-                  cinematographer—bringing depth, sincerity, and complete artistic
-                  involvement to the film.
-                </p>
-              </div>
+             <br /> 
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-gray-500">
+                Storytelling Philosophy
+              </p>
+              <p className="mt-4 text-[15px] leading-7 text-gray-700">
+                For Maya, filmmaking is not just a process—it is a deeply human
+                experience. Her work reflects empathy, authenticity, and a strong
+                connection with real stories and people.
+              </p>              
             </div>
           </div>
 
+<div className="py-8 grid gap-10 lg:grid-cols-[1fr_600px]">
+  {/* Text Section */}
+  <div className="rounded-[1.7rem] border border-gray-200 bg-white/80 p-6 shadow-lg backdrop-blur md:p-8">
+    <p className="text-sm font-bold uppercase tracking-[0.25em] text-gray-500">
+      Casting & Production
+    </p>
+
+    <p className="mt-5 text-[15px] leading-7 text-gray-700">
+      Maya has worked with Gautam Kishanchandani on projects including Choked, Ghost Stories, Guilty Minds, and Thar. 
+    </p>
+
+    <p className="mt-5 text-[15px] leading-7 text-gray-700">
+     Her casting approach comes from an actor’s perspective, helping performers feel comfortable and deliver authentic performances. 
+    </p>
+    <p className="mt-4 text-[15px] leading-7 text-gray-700">
+      She has also handled production responsibilities as a creative producer, further broadening her experience within the industry.
+    </p>
+    <p className="mt-4 text-[15px] leading-7 text-gray-700">
+      Maya’s filmmaking is not just about the final product; it is a
+      process of human connection, empathy, and storytelling that resonates with audiences on a profound level.
+    </p>    
+  </div>
+
+  {/* Image Scroller (RIGHT SIDE) */}
+  <div className="relative h-[460px] overflow-hidden rounded-[1.7rem] border border-white/30 bg-black p-3 shadow-2xl">
+    <div className="h-full w-full overflow-hidden rounded-[1.2rem]">
+      <div
+        className="flex h-full transition-transform duration-1000 ease-in-out"
+        style={{
+          width: `${castingImages.length * 100}%`,
+          transform: `translateX(-${currentImage * (100 / castingImages.length)}%)`,
+        }}
+      >
+        {castingImages.map((img, index) => (
+          <div
+            key={index}
+            className="h-full shrink-0"
+            style={{ width: `${100 / castingImages.length}%` }}
+          >
+            <img
+              src={img}
+              alt={`Casting ${index + 1}`}
+              className="h-full w-full object-cover grayscale transition duration-700 hover:grayscale-0"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div className="pointer-events-none absolute inset-3 rounded-[1.2rem] bg-gradient-to-t from-black/45 via-transparent to-transparent" />
+
+    <div className="absolute bottom-7 right-7 flex gap-2">
+      {castingImages.map((_, index) => (
+        <button
+          key={index}
+          type="button"
+          onClick={() => setCurrentImage(index)}
+          className={`h-2 rounded-full transition-all duration-300 ${
+            index === currentImage ? "w-6 bg-white" : "w-2 bg-white/50"
+          }`}
+        />
+      ))}
+    </div>
+  </div>
+</div>
           <div className="mt-12 grid gap-8 lg:grid-cols-2">
             <div className="overflow-hidden rounded-[1.7rem] border border-black/10 bg-black shadow-2xl">
               <div className="aspect-video">
                 <iframe
                   className="h-full w-full"
-                  src="https://www.youtube.com/embed/LJikI8YXZVQ"
+                  src="https://www.youtube.com/embed/gv103V1OXYs"
                   title="Maya Sharma Film"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
@@ -167,33 +236,6 @@ const FilmProduction: React.FC = () => {
             </div>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            <div className="rounded-[1.5rem] border border-gray-200 bg-white/80 p-6 shadow-lg backdrop-blur">
-              <h4 className="mb-3 font-serif text-2xl font-semibold text-black">
-                Casting
-              </h4>
-
-              <p className="text-sm leading-7 text-gray-700">
-                Maya has worked with Gautam Kishanchandani on projects including
-                <strong> Choked</strong>, <strong> Ghost Stories</strong>,
-                <strong> Guilty Minds</strong>, and <strong> Thar</strong>. Her
-                casting approach comes from an actor’s perspective, helping
-                performers feel comfortable and deliver authentic performances.
-              </p>
-            </div>
-
-            <div className="rounded-[1.5rem] bg-black p-6 text-white shadow-2xl">
-              <h4 className="mb-3 font-serif text-2xl font-semibold">
-                Storytelling Philosophy
-              </h4>
-
-              <p className="text-sm leading-7 text-gray-300">
-                For Maya, filmmaking is not just a process—it is a deeply human
-                experience. Her work reflects empathy, authenticity, and a strong
-                connection with real stories and people.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
